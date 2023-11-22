@@ -1,0 +1,24 @@
+
+type Refrigerator struct {
+	Type     string
+	Capacity int // в литрах
+	Height   float64
+	Width    float64
+	Depth    float64
+}
+
+type WashingMachine struct {
+	Type     string
+	Capacity int // в кг
+	Height   float64
+	Width    float64
+	Depth    float64
+}
+
+type Microwave struct {
+	Power    int // в Вт
+	Capacity int // в литрах
+	Height   float64
+	Width    float64
+	Depth    float64
+}

@@ -1,0 +1,45 @@
+package main
+
+import (
+	"fmt"
+	"jkwjerlkwqjlrwq/furniture"
+	"jkwjerlkwqjlrwq/techic"
+
+)
+
+func main() {
+	refrigerator := Refrigerator{
+		Type:     "Двухдверный",
+		Capacity: 300,
+		Height:   170,
+		Width:    60,
+		Depth:    65,
+	}
+
+	bed := Bed{
+		Size:     "King Size",
+		Material: "Дерево",
+		Length:   200,
+		Width:    180,
+		Height:   40,
+	}
+
+	// Создайте остальные объекты структур для бытовой техники и мебели
+
+	// Вывод информации
+	fmt.Println("Холодильник:")
+	fmt.Println("Тип:", refrigerator.Type)
+	fmt.Println("Объем:", refrigerator.Capacity, "л")
+	fmt.Println("Высота:", refrigerator.Height, "см")
+	fmt.Println("Ширина:", refrigerator.Width, "см")
+	fmt.Println("Глубина:", refrigerator.Depth, "см")
+
+	fmt.Println("\nКровать:")
+	fmt.Println("Размер:", bed.Size)
+	fmt.Println("Материал:", bed.Material)
+	fmt.Println("Длина:", bed.Length, "см")
+	fmt.Println("Ширина:", bed.Width, "см")
+	fmt.Println("Высота:", bed.Height, "см")
+
+	// Вывод остальной информации по объектам структур
+}

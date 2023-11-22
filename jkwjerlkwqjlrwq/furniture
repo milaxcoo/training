@@ -1,0 +1,23 @@
+
+type Bed struct {
+	Size     string
+	Material string
+	Length   float64
+	Width    float64
+	Height   float64
+}
+
+type Nightstand struct {
+	Material string
+	Height   float64
+	Width    float64
+	Depth    float64
+}
+
+type Wardrobe struct {
+	Type     string
+	Material string
+	Height   float64
+	Width    float64
+	Depth    float64
+}
