@@ -42,6 +42,7 @@ class Matrix:
     
 a = Matrix([[3, 0, -1], [2, 1, 0], [-4, -1, 1]])
 a.show()
-print(a.determinant())
+print("Determinant is %i" % a.determinant())
+print("Transposed: ")
 b = a.transpose()
 b.show()
