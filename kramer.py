@@ -40,4 +40,4 @@ matrix = [
 vector = [1, 2, 3]
 
 solution = kramer(matrix, vector)
-print("Решение системы уравнений:", solution)
+print("(x, y, z) =", solution)
