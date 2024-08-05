@@ -13,17 +13,20 @@ balance INTEGER NOT NULL
 )
 ''')
 
-# for i in range(1, 11):
-#     c.execute("INSERT INTO Users(username, email, age, balance) VALUES (?, ?, ?, ?)", (f'User{i}',
-#                                                                                        f'ex{i}@gmail.com', i * 10,
-#                                                                                        1000))
 
-# for i in range(0, 11):
-#     if i % 2 == 0:
-#         c.execute("UPDATE Users SET balance = ? WHERE id = ?", (500, i + 1))
-#
-# for i in range(1, 11, 3):
-#     c.execute("DELETE FROM Users WHERE id = ?", (i,))
+for i in range(1, 11):
+    c.execute("INSERT INTO Users(username, email, age, balance) VALUES (?, ?, ?, ?)", (f'User{i}',
+                                                                                       f'ex{i}@gmail.com', i * 10,
+                                                                                       1000))
+
+
+for i in range(0, 11):
+    if i % 2 == 0:
+        c.execute("UPDATE Users SET balance = ? WHERE id = ?", (500, i + 1))
+
+
+for i in range(1, 11, 3):
+    c.execute("DELETE FROM Users WHERE id = ?", (i,))
 
 
 c.execute("SELECT username, email, age, balance FROM Users WHERE age != ?", (60,))
