@@ -16,12 +16,13 @@ balance INTEGER NOT NULL
 
 c.execute("DELETE FROM Users WHERE id = ?", (6,))
 
-count = c.execute("SELECT count(*) FROM Users")
-print(count.fetchone()[0])
+counter = c.execute("SELECT count(*) FROM Users")
+count = counter.fetchone()[0]
+print("Количество записей: ", count)
 sum_balances = c.execute("SELECT sum(balance) FROM Users")
-print(sum_balances.fetchone()[0])
-avg_balances = c.execute("SELECT avg(balance) FROM Users")
-print(avg_balances.fetchone()[0])
+summ = sum_balances.fetchone()[0]
+print("Сумма балансов: ", summ)
+print("Средний баланс: ", summ/count)
 
 
 conn.commit()
